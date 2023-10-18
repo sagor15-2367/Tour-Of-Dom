@@ -24,6 +24,11 @@
             <li>Dhaka</li>
             <li>Bangladesh</li>
         </ul>
+        <ul>
+            <li>apple</li>
+            <li>samphony</li>
+            <li>ridmi</li>
+        </ul>
     </main>
     <script src="js/dom.js"></script>
     <script>
@@ -33,7 +38,17 @@
             id:11,
             study:function(time){
                 console.log(time,'study kortece');
+
             }
+        }
+        const licollection=document.getElementsByTagName('li');
+        for(const li of licollection){
+            console.log(li.innerText);
+        }
+        const allHeading=document.getElementsByTagName('h1');
+        for(const h1 of allHeading ){
+            console.log(h1);
+            console.log(h1.innerText);
         }
     </script>
 </body>
