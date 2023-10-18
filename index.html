@@ -1,55 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tour Of Dom</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/style.css" />
     <style>
-        li{
-           color: blue; 
-        }
+      li {
+        color: blue;
+      }
+      #fruits-title {
+        color: black;
+      }
+      .importent-places {
+        color: rgb(45, 226, 100);
+      }
     </style>
-    
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Welcome to my DOM</h1>
+      <h1>Welcome to my DOM</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sapiente,
+        explicabo eligendi necessitatibus nemo praesentium deserunt iure
+        repudiandae nesciunt molestiae quis rem cumque autem voluptatum omnis
+        aliquam minus rerum iste?
+      </p>
     </header>
     <main>
+      <section>
         <h1>My Awesome DOM</h1>
         <ul>
-            <li>jalali sheet</li>
-            <li>Rangpur</li>
-            <li>Dhaka</li>
-            <li>Bangladesh</li>
+          <li>jalali sheet</li>
+          <li>Rangpur</li>
+          <li>Dhaka</li>
+          <li>Bangladesh</li>
         </ul>
+      </section>
+      <section>
+        <h1 id="fruits-title">Fruits I like</h1>
         <ul>
-            <li>apple</li>
-            <li>samphony</li>
-            <li>ridmi</li>
+          <li>apple</li>
+          <li>samphony</li>
+          <li>ridmi</li>
         </ul>
+      </section>
+      <section>
+        <h1>Places I like to visit</h1>
+        <ul>
+          <li>sundorbon</li>
+          <li class="importent-places">sundorbon</li>
+          <li class="importent-places">sundorbon</li>
+          <li class="importent-places">salbon</li>
+          <li class="importent-places">katbon</li>
+          <li>schoolbon</li>
+        </ul>
+      </section>
     </main>
     <script src="js/dom.js"></script>
     <script>
-        // console.log('Sagor Alam');
-        const students={
-            name:'sagor Alam',
-            id:11,
-            study:function(time){
-                console.log(time,'study kortece');
-
-            }
-        }
-        const licollection=document.getElementsByTagName('li');
-        for(const li of licollection){
-            console.log(li.innerText);
-        }
-        const allHeading=document.getElementsByTagName('h1');
-        for(const h1 of allHeading ){
-            console.log(h1);
-            console.log(h1.innerText);
-        }
+      // console.log('Sagor Alam');
+      const students = {
+        name: "sagor Alam",
+        id: 11,
+        study: function (time) {
+          console.log(time, "study kortece");
+        },
+      };
+      const licollection = document.getElementsByTagName("li");
+      for (const li of licollection) {
+        // console.log(li.innerText);
+      }
+      const allHeading = document.getElementsByTagName("h1");
+      for (const h1 of allHeading) {
+        // console.log(h1);
+        // console.log(h1.innerText);
+      }
+      const fruitsTitle=document.getElementById('fruits-title');
+      fruitsTitle.innerText='Fruits changed by js';
+      const places=document.getElementsByClassName(importent-places);
+      for(const place of places){
+        console.log(place.innerText);
+      }
     </script>
-</body>
+  </body>
 </html>
